@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %} Trainee Update {% endblock %}
+{% block body %}
     <h1>Update Trainee</h1>
     <form action="/trainee/">
         <div>
@@ -14,5 +9,4 @@
         </div>
         <button type="submit">Update</button>
     </form>
-</body>
-</html>
+{% endblock %}

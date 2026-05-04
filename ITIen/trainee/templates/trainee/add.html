@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Trainee</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %} Trainee Add {% endblock %}
+{% block body %}
     <h1>Add Trainee</h1>
     <form action="">
         <div>
@@ -17,5 +12,4 @@
             <input type="password" placeholder="Password" required>
         </div>
     </form>
-</body>
-</html>
+{% endblock %}
