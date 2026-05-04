@@ -15,8 +15,8 @@ def courseList(request):
 def courseAdd(request):
     return render(request, "course/add.html")
 
-def courseUpdate(request):
-    return
+def courseUpdate(request, id):
+    return render(request, 'course/update.html', {"id": id})
 
-def courseDelete(request):
-    return
+def courseDelete(request, id):
+    return render(request, 'course/delete.html', {"id": id})
