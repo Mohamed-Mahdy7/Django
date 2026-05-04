@@ -1,11 +1,12 @@
-{% extends 'base.html' %}
+{% extends 'course/course.html' %}
 {% block title %} Course Add {% endblock %}
 {% block body %}
-    <h1>Add Course</h1>
     <form action="">
+        <h1>Add Course</h1>
         <div>
             <label for="name">Name</label>
             <input type="text" placeholder="Enter your name" required>
         </div>
+        <button type="submit">Add</button>
     </form>
 {% endblock %}

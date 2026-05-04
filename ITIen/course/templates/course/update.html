@@ -1,11 +1,11 @@
-{% extends 'base.html' %}
+{% extends 'course/course.html' %}
 {% block title %} Course Update {% endblock %}
 
 {% block body %}
-    <h1>Update Course</h1>
     <form action="/course/">
+        <h1>Update Course</h1>
         <div>
-            <label for="name"></label>
+            <label for="name">Name</label>
             <input type="text" id="name" placeholder="Enter name to update" required>
         </div>
         <button type="submit">Update</button>

@@ -8,7 +8,7 @@ nav{
     background-color: bisque;
     display: flex;
     justify-content: space-around;
-    height: 50px;
+    height: 70px;
     align-items: center;
 }
 ul{
@@ -23,7 +23,7 @@ a{
     text-decoration: none;
     color: black;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 17px;
+    font-size: 20px;
     padding: 10px;
     border-radius: 20px;
 
@@ -31,4 +31,9 @@ a{
 a:hover{
     background-color: rgb(240, 206, 164);
     color: #181fe5;
+}
+header{
+    width: 50%;
+    margin: 20% auto;
+    text-align: center;
 }

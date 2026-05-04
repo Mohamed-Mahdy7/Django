@@ -5,42 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'ITIen/css/main.css' %}">
     {% block style %} {% endblock %}
 </head>
 <body>
+    {% block nav %}
     <nav>
         <ul>
             <li>
-                <a href="/trainee/">Trainee List</a>
-            </li>
-            <li>
-                <a href="/trainee/add/">Trainee Add</a>
-            </li>
-            <li>
-                <a href="/trainee/update/1/">Trainee Update</a>
-            </li>
-            <li>
-                <a href="/trainee/delete/1/">Trainee Delete</a>
+                <a href="/trainee/">Trainee</a>
             </li>
         </ul>
         <ul>
             <li>
-                <a href="/course/">Course List</a>
+                <a href="/course/">Course</a>
             </li>
+        </ul>
+        <ul>
             <li>
-                <a href="/course/add/">Course Add</a>
-            </li>
-            <li>
-                <a href="/course/update/1/">Course Update</a>
-            </li>
-            <li>
-                <a href="/course/delete/1/">Course Delete</a>
+                <a href="/accounts/">Accounts</a>
             </li>
         </ul>
     </nav>
+    {% endblock %}
     {% block body %}
-
+    <header>
+        <h1 style="font-size: 100px;">ITIen</h1>
+    </header>
     {% endblock %}
 </body>
 </html>

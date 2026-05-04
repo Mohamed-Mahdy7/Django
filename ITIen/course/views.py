@@ -10,7 +10,7 @@ def courseList(request):
             {"id": 3, "name": "Django"}
         ]
     }
-    return render(request, "course/index.html", context)
+    return render(request, "course/course.html", context)
 
 def courseAdd(request):
     return render(request, "course/add.html")

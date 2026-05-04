@@ -2,6 +2,9 @@ from django.shortcuts import render
 
 # Create your views here.
 
+def home(request):
+    return render(request, "base.html")
+
 def traineeList(request):
     context = {
         "students": [
@@ -10,7 +13,7 @@ def traineeList(request):
             {"id": 3, "name": "omar"}
         ]
     }
-    return render(request, "trainee/index.html", context)
+    return render(request, "trainee/trainee.html", context)
 
 def traineeAdd(request):
     return render(request, "trainee/add.html")
