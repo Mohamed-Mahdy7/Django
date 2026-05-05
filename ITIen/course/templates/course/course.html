@@ -41,8 +41,10 @@
             <tbody>
                 {% for course in courses %}
                     <tr>
-                        <td>{{ course.id }}</td>
-                        <td>{{ course.name }}</td>
+                        <td>{{ course.ID }}</td>
+                        <td>
+                            <a href="{% url 'Course_details' course.ID %}" >{{ course.name }}</a>
+                        </td>
                     </tr>
                 {% endfor %}
             </tbody>

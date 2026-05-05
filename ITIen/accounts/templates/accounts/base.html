@@ -1,13 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock %}</title>
-</head>
-<body>
-    {% block body%}
-    <h1 style="margin: 50px auto; color: brown;">Accounts</h1>
-    {% endblock %}
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Accounts {% endblock %}
+
+{% block style %} 
+    <link rel="stylesheet" href="{% static 'accounts/css/main.css' %}">
+{% endblock %}
+
+{% block nav %}
+    <nav>
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/accounts/login/">Login</a>
+            </li>
+            <li>
+                <a href="/accounts/register/">Register</a>
+            </li>
+            <li>
+                <a href="/accounts/logout/">Logout</a>
+            </li>
+        </ul>
+    </nav>
+{% endblock %}
+
+{% block body%}
+    <header>Accounts</header>
+{% endblock %}

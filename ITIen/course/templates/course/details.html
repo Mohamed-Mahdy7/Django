@@ -1,0 +1,42 @@
+{% extends 'course/course.html' %}
+
+{% block title %} Course Details {% endblock %}
+
+{%block body%}
+    <main>
+        <h1>{{ course.name }}</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">course</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ID</td>
+                    <td>{{ course.ID }}</td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>{{ course.name }}</td>
+                </tr>
+                <tr>
+                    <td>Code</td>
+                    <td>{{ course.code }}</td>
+                </tr>
+                <tr>
+                    <td>Track</td>
+                    <td>{{ course.track }}</td>
+                </tr>
+                <tr>
+                    <td>Created Date</td>
+                    <td>{{ course.created_at }}</td>
+                </tr>
+                <tr>
+                    <td>Updated Date</td>
+                    <td>{{ course.updated_at }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+{% endblock %}
