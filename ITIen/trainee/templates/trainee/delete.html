@@ -1,7 +1,8 @@
 {% extends 'trainee/trainee.html' %}
 {% block title %} Trainee Delete {% endblock %}
 {% block body %}
-    <form action="/trainee/">
+    <form  method="POST">
+        {% csrf_token %}
         <h1>Delete Trainee</h1>
         <p>Are you sure you want to delete?</p>
         <button type="submit">Delete</button>

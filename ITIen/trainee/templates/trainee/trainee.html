@@ -4,28 +4,7 @@
 
 {% block style %}
     <link rel="stylesheet" href="{% static 'trainee/css/main.css' %}">
-{% endblock %}
-
-{% block nav %}
-    <nav>
-        <ul>
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="/trainee/">List</a>
-            </li>
-            <li>
-                <a href="/trainee/add/">Add</a>
-            </li>
-            <li>
-                <a href="/trainee/update/1/">Update</a>
-            </li>
-            <li>
-                <a href="/trainee/delete/1/">Delete</a>
-            </li>
-        </ul>
-    </nav>
+    <link rel="stylesheet" href="{% static 'trainee/css/list.css' %}">
 {% endblock %}
 
 {% block body %}
@@ -48,5 +27,8 @@
                 {% endfor %}
             </tbody>
         </table>
+        <a href="add/">
+            <button type="button">Add</button>
+        </a>
     </main>
 {% endblock %}

@@ -2,11 +2,19 @@
 {% block title %} Course Update {% endblock %}
 
 {% block body %}
-    <form action="/course/">
+    <form method="POST">
         <h1>Update Course</h1>
         <div>
             <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Enter name to update" required>
+            <input type="text" id="name" name="name" placeholder="Enter name to update" required>
+        </div>
+        <div>
+            <label for="code">Code</label>
+            <input type="text" id="code" name="code" placeholder="Enter code to update" required>
+        </div>
+        <div>
+            <label for="track">Track</label>
+            <input type="text" id="track" name="track" placeholder="Enter track to update" required>
         </div>
         <button type="submit">Update</button>
     </form>

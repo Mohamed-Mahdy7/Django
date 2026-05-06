@@ -1,9 +1,10 @@
 {% extends 'course/course.html' %}
 {% block title %} Course Delete {% endblock %}
 {% block body %}
-    <form action="/course/">
+    <form method="POST">
+        {% csrf_token %}
         <h1>Delete Course</h1>
         <p>Are you sure you want to delete?</p>
         <button type="submit">Delete</button>
-    </f>
+    </form>
 {% endblock %}

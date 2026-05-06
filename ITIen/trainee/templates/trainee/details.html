@@ -28,5 +28,13 @@
                 </tr>
             </tbody>
         </table>
+        <div class="buttons">
+            <a href="{% url 'Trainee_update' student.ID %}">
+                <button type="button">Update</button>
+            </a>
+            <a href="{% url 'Trainee_delete' student.ID %}">
+                <button type="button">Delete</button>
+            </a>
+        </div>
     </main>
 {% endblock %}

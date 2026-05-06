@@ -1,11 +1,22 @@
 {% extends 'course/course.html' %}
+{% load static %}
 {% block title %} Course Add {% endblock %}
+
 {% block body %}
-    <form action="">
+    <form method="POST">
+        {% csrf_token %}
         <h1>Add Course</h1>
         <div>
             <label for="name">Name</label>
-            <input type="text" placeholder="Enter your name" required>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div>
+            <label for="code">Code</label>
+            <input type="text" id="code" name="code" placeholder="Enter your code" required>
+        </div>
+        <div>
+            <label for="track">Track</label>
+            <input type="text" id="track" name="track" placeholder="Enter your track" required>
         </div>
         <button type="submit">Add</button>
     </form>
