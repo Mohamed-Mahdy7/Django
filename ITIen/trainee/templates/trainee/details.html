@@ -1,0 +1,32 @@
+{% extends 'trainee/trainee.html' %}
+{% block title %} Trainee Details {% endblock %}
+{% block body %}
+    <main>
+        <h1>{{ student.name }}</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">student</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ID</td>
+                    <td>{{ student.ID }}</td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>{{ student.name }}</td>
+                </tr>
+                <tr>
+                    <td>Code</td>
+                    <td>{{ student.age }}</td>
+                </tr>
+                <tr>
+                    <td>Track</td>
+                    <td>{{ student.degree }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+{% endblock %}
