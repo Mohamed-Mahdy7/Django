@@ -13,15 +13,21 @@
         <table>
             <thead>
                 <tr>
-                    <th colspan="2">students</th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Course</th>
+
                 </tr>
             </thead>
             <tbody>
-                {% for student in students %}
+                {% for trainee in trainees %}
                 <tr>
-                    <td>{{ student.ID }}</td>
+                    <td>{{ trainee.ID }}</td>
                     <td>
-                        <a href="{% url 'Trainee_Details' student.ID %}" >{{ student.name }}</a>
+                        <a href="{% url 'Trainee_Details' trainee.ID %}" >{{ trainee.name }}</a>
+                    </td>
+                    <td>
+                        {{ trainee.course_id }}
                     </td>
                 </tr>
                 {% endfor %}
