@@ -1,10 +1,11 @@
 {% extends 'trainee/trainee.html' %}
 {% block title %} Trainee Add {% endblock %}
 {% block body %}
-    <form method="POST">
+    <form method="POST", enctype="multipart/form-data">
         {% csrf_token %}
         <h1>Add Trainee</h1>
-        <div>
+        {{ form }}
+        <!-- <div>
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Enter your Name" required>
         </div>
@@ -15,7 +16,7 @@
         <div>
             <label for="degree">Degree</label>
             <input type="degree" id="degree" name="degree" placeholder="Enter your Degree" required>
-        </div>
+        </div> -->
         <button type="submit">Add</button>
     </form>
 {% endblock %}

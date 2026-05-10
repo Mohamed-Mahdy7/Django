@@ -13,22 +13,38 @@
         <table>
             <thead>
                 <tr>
-                    <th colspan="2">students</th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Image</th>
+                    <th>Course</th>
+                    <th>degree</th>
                 </tr>
             </thead>
             <tbody>
-                {% for student in students %}
+                {% for trainee in trainees %}
                 <tr>
-                    <td>{{ student.ID }}</td>
+                    <td>{{ trainee.ID }}</td>
                     <td>
-                        <a href="{% url 'Trainee_Details' student.ID %}" >{{ student.name }}</a>
+                        <a href="{% url 'Trainee_Details' trainee.ID %}" >{{ trainee.name }}</a>
                     </td>
+                    <td>
+                        {% if trainee.image %}
+                        <img class="trainee-image" src="{{ trainee.image.url }}" alt="{{ trainee.name }}">
+                        {% else %}
+                        No Image
+                        {% endif %}
+                    </td>
+                    <td>{{ trainee.course.name }}</td>
+                    <td>{{ trainee.degree }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
-        <a href="add/">
-            <button type="button">Add</button>
+        <a href="{% url 'Trainee_add' %}">
+            <button type="button">Add Form</button>
+        </a>
+        <a href="{% url 'Trainee_add_form' %}">
+            <button type="button">Add FormModel</button>
         </a>
     </main>
 {% endblock %}
