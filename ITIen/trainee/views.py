@@ -9,7 +9,7 @@ def home(request):
     return render(request, "base.html")
 
 def traineeList(request):
-    context = {"trainees": Trainee.objects.all()}
+    context = {"trainees": Trainee.objects.filter(is_active=True)}
     return render(request, "trainee/trainee.html", context)
 
 def traineeDetails(request, id):
@@ -61,4 +61,12 @@ def traineeDelete(request, id):
         trainee.delete()
         return redirect('Trinee_list')
     
+    return render(request, 'trainee/delete.html')
+
+def traineeSoftDelete(request, id):
+    trainee = Trainee.objects.get(pk=id)
+    if request.method == "POST":
+        trainee.is_active = False
+        trainee.save()
+        return redirect('Trinee_list')
     return render(request, 'trainee/delete.html')

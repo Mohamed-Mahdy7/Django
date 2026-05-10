@@ -26,6 +26,24 @@
                     <td>Track</td>
                     <td>{{ trainee.degree }}</td>
                 </tr>
+                <tr>
+                    <td>Image</td>
+                    <td>
+                        {% if trainee.image %}
+                            <img class="trainee-image" src="{{ trainee.image.url }}" alt="{{ trainee.name }}">
+                        {% else %}
+                            No Image
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Course</td>
+                    <td>{{ trainee.course.name}}</td>
+                </tr>
+                <tr>
+                    <td>Degree</td>
+                    <td>{{ trainee.degree }}</td>
+                </tr>
             </tbody>
         </table>
         <div class="buttons">
@@ -34,6 +52,9 @@
             </a>
             <a href="{% url 'Trainee_delete' trainee.ID %}">
                 <button type="button">Delete</button>
+            </a>
+            <a href="{% url 'Trainee_delete_soft' trainee.ID %}">
+                <button type="button">Soft Delete</button>
             </a>
         </div>
     </main>
