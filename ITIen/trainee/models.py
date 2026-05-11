@@ -7,6 +7,7 @@ from course.models import Course
 class Trainee(models.Model):
     ID=models.AutoField(primary_key=True)
     name=models.CharField(max_length=100, null=False)
+    email=models.EmailField(unique=True, blank=True, null=True)
     age=models.IntegerField(null=False)
     degree=models.DecimalField(decimal_places=2, max_digits=4 ,null=False)
     image=models.ImageField(upload_to='trainee', blank=True, null=True)

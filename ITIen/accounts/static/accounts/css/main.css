@@ -42,3 +42,26 @@ p{
     margin: 10px;
     font-size: 20px;
 }
+.logout{
+    background-color: bisque;
+    text-decoration: none;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 0px;
+    position: relative;
+    bottom: 15px;
+}
+.logout:hover{
+    background-color: rgb(240, 206, 164);
+    color: #181fe5;
+}
+form{
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    width: 0px;
+    height: 0px;
+}

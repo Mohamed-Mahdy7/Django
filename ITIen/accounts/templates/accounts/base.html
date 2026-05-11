@@ -12,15 +12,21 @@
             <li>
                 <a href="/">Home</a>
             </li>
-            <li>
-                <a href="/accounts/login/">Login</a>
-            </li>
-            <li>
-                <a href="/accounts/register/">Register</a>
-            </li>
-            <li>
-                <a href="/accounts/logout/">Logout</a>
-            </li>
+            {% if user.is_authenticated %}
+                <li>
+                    <form method="POST" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button class="logout" type="submit">Logout</button>
+                    </form>
+                </li>
+            {% else %}
+                <li>
+                    <a href="{% url 'login' %}">Login</a>
+                </li>
+                <li>
+                    <a href="{% url 'register' %}">Register</a>
+                </li>
+            {% endif %}
         </ul>
     </nav>
 {% endblock %}
