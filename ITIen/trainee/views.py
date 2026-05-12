@@ -10,10 +10,6 @@ from django.urls import reverse_lazy
 def home(request):
     return render(request, "base.html")
 
-# def traineeList(request):
-#     context = {"trainees": Trainee.objects.filter(is_active=True)}
-#     return render(request, "trainee/trainee.html", context)
-
 class TraineeList(generic.ListView):
     queryset= Trainee.objects.filter(is_active=True)
     template_name = 'trainee/trainee.html'
@@ -22,15 +18,6 @@ class TraineeList(generic.ListView):
 def traineeDetails(request, id):
     context = {"trainee": Trainee.objects.get(pk=id)}
     return render(request, "trainee/details.html", context)
-
-# def traineeAdd(request):
-#     context = {"trainees": Trainee.objects.all(), 'form':TraineeFormModel()}
-#     if request.method == "POST":
-#         form = TraineeFormModel(data=request.POST, files=request.FILES)
-#         if form.is_valid():
-#             form.save()
-#             return redirect('Trinee_list')
-#     return render(request, "trainee/add.html", context=context)
 
 class TraineeAdd(View):
     context = {"trainees": Trainee.objects.all(), 'form':TraineeFormModel()}

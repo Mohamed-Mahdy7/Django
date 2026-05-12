@@ -3,13 +3,7 @@
     margin: 0px;
     box-sizing: border-box;
 }
-main{
-    width: 50%;
-    border: 1px solid black;
-    padding: 5px;
-    margin: 10% auto;
-    text-align: center;
-}
+
 h1{
     color: brown;
 }

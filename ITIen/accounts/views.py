@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 # Create your views here.
 
 def home(request):
-    return render(request, 'accounts/base.html')
+    return render(request, 'base.html')
 
 def login(request):
     pass
