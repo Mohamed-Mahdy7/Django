@@ -3,13 +3,19 @@
     margin: 0px;
     box-sizing: border-box;
 }
-
+main{
+    border: none;
+    padding: 5px;
+    margin: 10% auto;
+    text-align: center;
+}
 nav{
-    background-color: bisque;
+    background-color: #f0f0f0;
     display: flex;
     justify-content: space-around;
     height: 70px;
     align-items: center;
+    box-shadow: 1px 1px 10px;
 }
 ul{
     list-style: none;
@@ -19,21 +25,44 @@ ul{
 li{
     padding: 5px;
 }
-a{
+a, .logout{
     text-decoration: none;
-    color: black;
+    color: #333;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     padding: 10px;
     border-radius: 20px;
+    border: none;
+    background-color: transparent;
 
 }
-a:hover{
-    background-color: rgb(240, 206, 164);
-    color: #181fe5;
+a:hover, .logout:hover{
+    background-color: #e0e0e0;
+    color: black;
 }
 header{
     width: 50%;
     margin: 20% auto;
     text-align: center;
+}
+.logout-form {
+    border: none;
+}
+.form{
+    height: 30px;
+    margin: 10px 0px;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 6px;
+}
+select {
+    margin: 0px 10px;
+    width: 80%;
+    border-radius: 10px;
+    padding: 7px;
+}
+input[type=checkbox]{
+    position: relative;
+    right: 37%;
 }
