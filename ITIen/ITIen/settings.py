@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'trainee.apps.TraineeConfig',
     'course.apps.CourseConfig',
     'accounts.apps.AccountsConfig',
+    'rest_framework',
     
 ]
 
