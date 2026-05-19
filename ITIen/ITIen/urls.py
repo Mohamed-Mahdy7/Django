@@ -24,10 +24,10 @@ urlpatterns = [
     path('', home, name="home"),
     path('admin/', admin.site.urls),
     path('trainee/', include('trainee.urls')),
+    path('trainee/api/', include('trainee.api.urls')),
     path('course/', include('course.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('accounts.urls')),
-    
 ]
 
 if settings.DEBUG:
